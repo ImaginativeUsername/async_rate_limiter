@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package rate_limiter;
+
+
+message AcquireRequest {
+    uint64 amount = 1;
+}
+
+
+message AcquireResponse {
+    bool success = 1;
+    optional string error_message = 2;
+}
+
+
+service RateLimiter {
+    rpc acquire(AcquireRequest) returns (AcquireResponse);
+}
