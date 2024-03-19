@@ -7,6 +7,7 @@ use crate::protobuf::rate_limiter::{
 };
 
 
+#[derive(Clone)]
 pub struct RateLimiterClient {
     client: RateLimiterClientGrpc<Channel>
 }
