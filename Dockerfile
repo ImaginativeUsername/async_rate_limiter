@@ -14,6 +14,7 @@ RUN wget "https://github.com/protocolbuffers/protobuf/releases/download/v${PROTO
 RUN unzip ./protoc.zip -x readme.txt -d /usr/local
 
 WORKDIR /build
+ADD ./bin ./bin
 ADD ./protos ./protos
 ADD ./src ./src
 ADD build.rs Cargo.toml ./
