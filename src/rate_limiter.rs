@@ -6,6 +6,7 @@ use std::{
 use tokio::sync::Semaphore;
 
 
+#[derive(Clone)]
 pub struct AsyncRateLimiter {
     limit: usize,
     time_period: Duration,
